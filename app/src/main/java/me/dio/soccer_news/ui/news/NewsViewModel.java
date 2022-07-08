@@ -4,16 +4,28 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import me.dio.soccer_news.domain.News;
+
 public class NewsViewModel extends ViewModel {
 
-    private final MutableLiveData<String> mText;
+    private final MutableLiveData<List<News>> mNews;
 
     public NewsViewModel() {
-        mText = new MutableLiveData<>();
-        mText.setValue("This is home fragment");
+        mNews = new MutableLiveData<>();
+
+        // TODO remove news mock
+        List<News> news = new ArrayList<>();
+        news.add(new News("Title 1", "Description 1"));
+        news.add(new News("Title 2", "Description 2"));
+        news.add(new News("Title 3", "Description 3"));
+
+        mNews.setValue(news);
     }
 
-    public LiveData<String> getText() {
-        return mText;
+    public LiveData<List<News>> getNews() {
+        return mNews;
     }
 }
