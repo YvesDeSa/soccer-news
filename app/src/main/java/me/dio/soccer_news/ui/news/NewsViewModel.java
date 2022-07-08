@@ -17,7 +17,7 @@ public class NewsViewModel extends ViewModel {
         mNews = new MutableLiveData<>();
 
         // TODO remove news mock
-        List<News> news = new ArrayList<>();
+        List<News> news = new ArrayList<News>();
         news.add(new News("Title 1", "Description 1"));
         news.add(new News("Title 2", "Description 2"));
         news.add(new News("Title 3", "Description 3"));
