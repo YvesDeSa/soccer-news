@@ -2,12 +2,19 @@ package me.dio.soccer_news.domain;
 
 public class News {
     private String title;
-    private  String description;
+    private String description;
+    private String img;
+    private String link;
 
-    public News(String title, String description) {
-        this.title = title;
-        this.description = description;
+    public String getLink() {return link;}
+
+    public void setLink(String link) {
+        this.link = link;
     }
+
+    public String getImg() {return img;}
+
+    public void setImg(String img) {this.img = img;}
 
     public String getTitle() {
         return title;
