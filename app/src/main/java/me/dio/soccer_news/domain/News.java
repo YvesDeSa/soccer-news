@@ -3,7 +3,7 @@ package me.dio.soccer_news.domain;
 public class News {
     private String title;
     private String description;
-    private String img;
+    private String image;
     private String link;
 
     public String getLink() {return link;}
@@ -12,9 +12,9 @@ public class News {
         this.link = link;
     }
 
-    public String getImg() {return img;}
+    public String getImage() {return image;}
 
-    public void setImg(String img) {this.img = img;}
+    public void setImage(String img) {this.image = img;}
 
     public String getTitle() {
         return title;
